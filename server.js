@@ -27,8 +27,11 @@ app.use(express.json());
 // The routes serve as a map
 // And the map describes how to respond when users visit or request data from the URLs
 
-require("./routes/htmlRoutes")(app);
+// apiRoutes has to come first, because...
+// htmlRoutes has a "catch-all" route "*"
+// and that "catch-all" route needs to be the last thing to run
 require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 //----------------------------------------------------
 // Listener
