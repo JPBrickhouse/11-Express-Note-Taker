@@ -18,6 +18,9 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// https://expressjs.com/en/starter/static-files.html
+// app.use(express.static('public'));
+
 //----------------------------------------------------
 // Routing
 // Pointing the server to a collection of route files
@@ -25,7 +28,7 @@ app.use(express.json());
 // And the map describes how to respond when users visit or request data from the URLs
 
 require("./routes/htmlRoutes")(app);
-
+require("./routes/apiRoutes")(app);
 
 //----------------------------------------------------
 // Listener

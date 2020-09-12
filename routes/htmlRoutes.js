@@ -1,9 +1,10 @@
 
+//----------------------------------------------------
 // Path package required to get the correct file paths for the html files
 var path = require("path");
 
+//----------------------------------------------------
 // ROUTING
-
 // Exporting the HTML GET requests
 module.exports = function (app) {
 
