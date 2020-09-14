@@ -37,10 +37,11 @@ module.exports = function (app) {
             text: req.body.text
         }
 
-        console.log(newNote);
-
         // Adds the new note the db.json file
+        db.push(newNote);
 
+        // Sending the newNote as the response
+        res.send(newNote);
     });
 
 
