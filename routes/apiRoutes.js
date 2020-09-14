@@ -2,11 +2,15 @@
 //----------------------------------------------------
 // Loading the data
 // Link the routes to the data sources
-// The is held in a json array of objects
-var db = require("../db/db.json");
+// The data is held in a json array of objects
+const db = require("../db/db.json");
 
 // The fs module enables interacting with the file system
-var fs = require("fs");
+const fs = require("fs");
+
+// The uuid module creates unique ids
+// uuid (universally unique identifier)
+const uuid = require ("uuid");
 
 //----------------------------------------------------
 // ROUTING
@@ -14,17 +18,21 @@ var fs = require("fs");
 module.exports = function (app) {
 
     // GET request
+    // Reads the db.json file and returns all the saved notes as JSON
     app.get("/api/notes", function (req, res) {
-
         res.send(db);
     });
 
-
-
-
-
     // POST request
+    app.post("/api/notes", function (req,res) {
+        // Receives a new note to save on the request body
+        var newNote = req.body;
+        console.log(newNote);
+        res.send(db);
 
+        // Adds the new note the db.json file
+
+    });
 
 
 
