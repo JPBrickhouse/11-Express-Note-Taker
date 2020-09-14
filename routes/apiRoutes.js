@@ -28,7 +28,7 @@ module.exports = function (app) {
         // Receives a new note to save on the request body
         var newNote = req.body;
         console.log(newNote);
-        res.send(db);
+        
 
         // Adds the new note the db.json file
 

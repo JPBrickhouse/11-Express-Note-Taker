@@ -19,7 +19,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // https://expressjs.com/en/starter/static-files.html
-// app.use(express.static('public'));
+// To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
+app.use(express.static('public'));
 
 //----------------------------------------------------
 // Routing
