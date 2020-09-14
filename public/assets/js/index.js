@@ -11,7 +11,7 @@ let activeNote = {};
 const getNotes = () => {
   return $.ajax({
     url: "/api/notes",
-    method: "GET",
+    method: "GET", // corresponds to the GET method in the apiRoutes.js file
   });
 };
 
@@ -20,7 +20,7 @@ const saveNote = (note) => {
   return $.ajax({
     url: "/api/notes",
     data: note,
-    method: "POST",
+    method: "POST", // corresponds to the POST method in the apiRoutes.js file
   });
 };
 
@@ -28,7 +28,7 @@ const saveNote = (note) => {
 const deleteNote = (id) => {
   return $.ajax({
     url: "api/notes/" + id,
-    method: "DELETE",
+    method: "DELETE", // corresponds to the DELETE method in the apiRoutes.js file
   });
 };
 

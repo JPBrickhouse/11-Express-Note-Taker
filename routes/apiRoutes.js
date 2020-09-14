@@ -10,7 +10,9 @@ const fs = require("fs");
 
 // The uuid module creates unique ids
 // uuid (universally unique identifier)
-const uuid = require ("uuid");
+// Syntax from the following website:
+// https://www.npmjs.com/package/uuid
+const { v4: uuidv4 } = require('uuid');
 
 //----------------------------------------------------
 // ROUTING
@@ -24,11 +26,18 @@ module.exports = function (app) {
     });
 
     // POST request
-    app.post("/api/notes", function (req,res) {
-        // Receives a new note to save on the request body
-        var newNote = req.body;
+    app.post("/api/notes", function (req, res) {
+        // Creates a newNote object
+        var newNote = {
+            // uuid unique id syntax from the following:
+            // https://www.npmjs.com/package/uuid
+            id: uuidv4(),
+            // Gets the note title and text from the request body
+            title: req.body.title,
+            text: req.body.text
+        }
+
         console.log(newNote);
-        
 
         // Adds the new note the db.json file
 
