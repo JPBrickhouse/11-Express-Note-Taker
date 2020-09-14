@@ -19,14 +19,14 @@ const { v4: uuidv4 } = require('uuid');
 // Exporting the API requests
 module.exports = function (app) {
 
-    // GET request
+    // GET
     // Reads the db.json file and returns all the saved notes as JSON
     app.get("/api/notes", function (req, res) {
         // Sending the db.json as the response
         res.send(db);
     });
 
-    // POST request
+    // POST
     app.post("/api/notes", function (req, res) {
         // Creates a newNote object
         var newNote = {
@@ -45,7 +45,7 @@ module.exports = function (app) {
         res.send(newNote);
     });
     
-    // DELETE request
+    // DELETE
     app.delete("/api/notes/:id", function (req,res) {
 
         // Getting the unique note ID from the request
