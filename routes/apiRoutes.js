@@ -28,6 +28,11 @@ module.exports = function (app) {
 
     // POST
     app.post("/api/notes", function (req, res) {
+        
+        // POSSIBLE avenues for future features
+        // Create a tool that checks to see if a duplicate note already exists
+        // If a duplicate exists, don't post a new note
+        
         // Creates a newNote object
         var newNote = {
             // uuid unique id syntax from the following:
