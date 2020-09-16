@@ -11,6 +11,12 @@ This application will use an express backend to save and retrieve note data from
 
 Visit the deployed application here: [https://ancient-basin-96001.herokuapp.com/](https://ancient-basin-96001.herokuapp.com/)
 
+## SCREENSHOTS
+### Landing Page
+![Landing Page](./img/LandingPage.png)
+### NoteTaking Page
+![Note Taking Page](./img/NoteTakingPage.png)
+
 ## TABLE OF CONTENTS
 * [Installation](#installation)
 * [Usage](#usage)
